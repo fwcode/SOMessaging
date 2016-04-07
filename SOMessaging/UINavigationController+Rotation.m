@@ -56,12 +56,7 @@ NSString const *kCantAutorotateKey = @"cantAutorotate.key";
 
 - (BOOL)my_shouldAutorotate
 {
-    if ([self respondsToSelector:@selector(cantAutorotate)] && self.cantAutorotate) {
-        return NO;
-    }
-    return [self my_shouldAutorotate];
+    return YES;
 }
-
-
 
 @end
